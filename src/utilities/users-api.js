@@ -22,7 +22,6 @@ export async function login(credentials) {
         }
     );
     if(res.ok) {
-            console.log('ayyy bob esponja');
             return res.json();
         } else {
             throw new Error('Invalid Login');

@@ -5,6 +5,7 @@ import AuthPage from '../AuthPage/AuthPage';
 import HomePage from '../HomePage/HomePage';
 import NewBookingPage from '../NewBookingPage/NewBookingPage';
 import NavBar from '../../components/NavBar/NavBar'
+import LogInForm from '../../components/LogInForm/LogInForm';
 
 export default function App() {
   const [user, setUser ] = useState(null)

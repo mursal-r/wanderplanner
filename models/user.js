@@ -18,7 +18,8 @@ const userSchema = new Schema({
         trim: true,
         minLength: 3,
         required: true
-    }
+    },
+    bookings: [{type: Schema.Types.ObjectId, ref: "Booking"}]
 }, {
     timestamps: true,
     toJSON: {
