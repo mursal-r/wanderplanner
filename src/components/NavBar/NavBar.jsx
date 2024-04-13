@@ -10,7 +10,7 @@ export default function NavBar({user, setUser}) {
     console.log(user.name);
     return(
         <nav>
-            <Link to="/activities">sumtin</Link>
+            <Link to="/home">Home</Link>
             &nbsp; | &nbsp;
             <Link to="/bookings">suntin suntin</Link>
             &nbsp; | &nbsp;
