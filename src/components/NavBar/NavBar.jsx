@@ -10,9 +10,9 @@ export default function NavBar({user, setUser}) {
     console.log(user.name);
     return(
         <nav>
-            <Link to="/orders">sumtin</Link>
+            <Link to="/activities">sumtin</Link>
             &nbsp; | &nbsp;
-            <Link to="/orders/new">suntin suntin</Link>
+            <Link to="/bookings">suntin suntin</Link>
             &nbsp; | &nbsp;
             <span>Welcome, {user.name}</span>
             &nbsp;&nbsp;

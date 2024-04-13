@@ -1,4 +1,5 @@
 import React from 'react';
+import PopularDestinations from '../../components/PopularDestinations/PopularDestinations';
 import './HomePage.css'; // Import CSS file for styling
 
 export default function HomePage() {
@@ -14,6 +15,7 @@ export default function HomePage() {
                 <input type="text" placeholder="Destination lookup" />
                 <button className="search-button">Search</button>
             </div>
+            <div><PopularDestinations/></div>
 
         </div>
     );
