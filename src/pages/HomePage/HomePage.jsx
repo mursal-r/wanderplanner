@@ -17,15 +17,14 @@ export default function HomePage() {
             <div className="header">
                 <div className="header-content">
                     <img src="/images/mainImage.png" alt="Fun activities" />
-                    <h1>Explore fun activities for your next destination with ease</h1>
+                    <h1>Explore fun activities for your next destination with ease.</h1>
                 </div>
             </div>
             <div className="search-container">
                 <input type="text" placeholder="Destination lookup" onChange={(e) => setSearchQuery(e.target.value)}/>
                 <button className="search-button" onClick={handleSearch}>Search</button>
             </div>
-            <div><PopularDestinations/></div>
-
+            <PopularDestinations />
         </div>
     );
 }
