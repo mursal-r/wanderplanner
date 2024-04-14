@@ -1,0 +1,16 @@
+.tourist-attraction-container {
+    display: flex; /* Use Flexbox but maybe chnage later*/
+    justify-content: flex-start; /* Align items from the start of the container */
+    align-items: center; /* Center items vertically */
+    overflow-x: auto; /* Enable horizontal scrolling if needed later*/
+}
+
+.tourist-attraction-card {
+    /* Optional: Add margin or padding as needed later */
+    margin-right: 10px; /* Adjust as needed later */
+}
+
+.attraction-image {
+    width: 100px; /* Adjust  width as needed later  */
+    height: auto; /* Maintain the aspect ratio */
+}
