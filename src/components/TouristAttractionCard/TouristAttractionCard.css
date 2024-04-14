@@ -7,10 +7,11 @@
 
 .tourist-attraction-card {
     /* Optional: Add margin or padding as needed later */
-    margin-right: 10px; /* Adjust as needed later */
+    margin-right: 50px; /* Adjust as needed later */
+    
 }
 
 .attraction-image {
-    width: 100px; /* Adjust  width as needed later  */
+    width: 200px; /* Adjust  width as needed later  */
     height: auto; /* Maintain the aspect ratio */
 }
