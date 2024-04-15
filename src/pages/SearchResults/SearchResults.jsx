@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { getActivityData } from '../../utilities/searchBar-service';
 import ActivityCard from '../../components/ActivityCard/ActivityCard';
+import './SearchResults.css'
+import SearchBar from '../../components/SearchBar/SearchBar';
 
 export default function SearchResults() {
   const location = useLocation();
@@ -27,6 +29,7 @@ export default function SearchResults() {
 
   return (
     <div>
+      <SearchBar/>
       <h2>Search Results for "{query}"</h2>
       <div className="activity-list">
         {activities ? (
