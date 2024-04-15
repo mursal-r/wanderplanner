@@ -1,7 +1,6 @@
 import {Component} from 'react';
-
 import {signUp}  from '../../utilities/users-service';
-import {Link} from 'react-router-dom';
+import {Link, Navigate} from 'react-router-dom';
 
 
 
@@ -28,8 +27,10 @@ export default class SignUpForm extends Component {
             const formData = {name, email, password};
             const user = await signUp(formData);
             this.props.setUser(user);
-        } catch {
+            this.props.navigate(`/home`);
+        } catch(err) {
             // An error occurred 
+            console.log('el error: ', err);
             this.setState({ error: 'Sign Up Failed - Try Again' });
         }
     };

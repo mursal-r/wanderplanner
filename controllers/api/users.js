@@ -6,21 +6,22 @@ const User = require("../../models/User");
 
 module.exports = {
     create,
-    login
+    login,
+    checkToken
 };
 
 // controllers/api/users.js
 
 async function create(req, res) {
-  console.log('ay calamardo');
+  console.log('create user request');
     try {
         // Add the user to the database
-        //console.log(req.body);
         const user = await User.create(req.body);
 
         const token = createJWT(user);
-
+        
         res.json(token);
+        console.log('response sent', token);
       
     } catch (err) {
       // Client will check for non-2xx status code 
@@ -30,6 +31,7 @@ async function create(req, res) {
     }
   }
   async function login(req, res) {
+    console.log('login request');
     const {email, password} = req.body;
     
     try {
@@ -45,12 +47,18 @@ async function create(req, res) {
 
         const token = createJWT(user);
         res.json({token});
+        console.log('login response: : ', token);
 
       } catch(error) {
         console.log('valio v: ',error);
         console.error('Login error: ', error);
         res.status(500).json({error: 'Server error'});
       }
+  }
+  function checkToken(req, res) {
+    // req.user will always be there for you when a token is sent
+    console.log('req.user', req.user);
+    res.json(req.exp);
   }
 
   function createJWT(user) {

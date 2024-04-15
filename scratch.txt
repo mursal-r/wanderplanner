@@ -1,0 +1,21 @@
+{user ?
+    <>
+    <NavBar user={user} setUser={setUser}/>
+      <Routes>
+        
+        
+        <Route path="/bookings" element={<NewBookingPage/>}/>
+        <Route path="/activity/:id"/>
+        
+    </Routes>
+    </>
+        : 
+        <AuthPage setUser={setUser}/>
+    }
+
+
+   
+            <Link to="/bookings">suntin suntin</Link>
+            &nbsp; | &nbsp;
+            
+            

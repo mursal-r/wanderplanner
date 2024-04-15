@@ -8,18 +8,29 @@ export default function NavBar({user, setUser}) {
         userService.logOut();
         setUser(null);
     }
-    console.log(user.name);
+
+    function handleLogIn() {
+
+    }
+    //console.log(user.name);
     return(
         <nav>
-            <Link to="/home">Home</Link>
-            &nbsp; | &nbsp;
-            <Link to="/bookings">suntin suntin</Link>
-            &nbsp; | &nbsp;
-            <span>Welcome, {user.name}</span>
-            &nbsp;&nbsp;
-            <Link className='log' to=""
+                <Link to="/home">Home</Link>
+                &nbsp; | &nbsp;
+            {user ? 
+                <>
+                <Link className='log' to=""
                 onClick={handleLogOut}
-            >Log Out</Link>
+                >Log Out</Link>
+                &nbsp;&nbsp;
+                <span>Welcome, {user.name}</span>
+                &nbsp;&nbsp;
+                </>
+            : 
+                <Link className='log' to="/authpage"
+                onClick={handleLogIn}
+                >Login / Signup</Link>
+            }
         </nav>
     );
 }
