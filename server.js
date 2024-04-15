@@ -21,6 +21,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 
 
 app.use('/api/users', require('./routes/api/users'));
+app.use('/api/search',require('./routes/api/search'));
 
 // Configure to use port 3001 instead of 3000 during
 // development to avoid collision with React's dev server

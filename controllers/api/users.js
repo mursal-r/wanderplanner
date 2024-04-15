@@ -2,7 +2,7 @@
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const { JsonWebTokenError } = require("jsonwebtoken");
-const User = require("../../models/user");
+const User = require("../../models/User");
 
 module.exports = {
     create,

@@ -14,11 +14,11 @@ export default function App() {
   
   return (
     <main className="App">
-      <Router> {/* Place the Router here */}
         {user ?
         <>
           <NavBar user={user} setUser={setUser}/>
           <Routes>
+            <Route path="/" element={<HomePage/>}/>
             <Route path="/home" element={<HomePage/>}/>
             <Route path="/bookings" element={<NewBookingPage/>}/>
             <Route path="/activity/:id"/>
@@ -28,7 +28,6 @@ export default function App() {
             : 
             <AuthPage setUser={setUser}/>
         }
-      </Router>
     </main>
   );
 }

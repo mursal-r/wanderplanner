@@ -1,23 +1,23 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-const SearchBar = () => {
+const SearchBar = ({onSearch}) => {
   const [query, setQuery] = useState('');
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const handleSearch = () => {
-    history.push(`/search-results?query=${query}`);
+    navigate(`/search-results?query=${query}`);
   };
 
   return (
-    <div>
+    <div className="search-container">
       <input
         type="text"
+        placeholder="Destination lookup"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        placeholder="Enter a city..."
       />
-      <button onClick={handleSearch}>Search</button>
+      <button className="search-button" onClick={handleSearch}>Search</button>
     </div>
   );
 }
