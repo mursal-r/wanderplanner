@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import "./BookingForm.css";
+import backgroundVideo from "../../assets/backgroundVideo.mp4"; // Adjust the import path
 
 const BookingForm = () => {
   const [booking, setBooking] = useState({
     firstName: "",
     lastName: "",
-    dateOfBirth: null, // Change dateOfBirth initial state to null
+    dateOfActivity: new Date(), // Initialize with current date
     tickets: 1,
   });
 
@@ -16,6 +18,10 @@ const BookingForm = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setBooking((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleDateChange = (date) => {
+    setBooking((prev) => ({ ...prev, dateOfActivity: date }));
   };
 
   const handleSubmit = (e) => {
@@ -51,12 +57,11 @@ const BookingForm = () => {
         </div>
         <div className="form-group">
           <DatePicker
-            selected={booking.dateOfBirth} // Use selected prop for DatePicker
-            onChange={(date) =>
-              setBooking((prev) => ({ ...prev, dateOfBirth: date }))
-            }
-            dateFormat="dd/MM/yyyy"
-            placeholderText="dd/mm/yyyy"
+            selected={booking.dateOfActivity}
+            onChange={handleDateChange}
+            dateFormat="MM/dd/yyyy" // Set the date format to MM/dd/yyyy
+            placeholderText="mm/dd/yyyy"
+            className="form-control"
             required
           />
         </div>
@@ -74,6 +79,11 @@ const BookingForm = () => {
           Book Now
         </button>
       </form>
+      {/* Video Display */}
+      <video autoPlay loop muted playsInline className="background-video">
+        <source src={backgroundVideo} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
     </div>
   );
 };
