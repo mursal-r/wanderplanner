@@ -28,8 +28,15 @@ export default function NewBookingPage() {
     return (
         <>
             <h1> New Booking Page </h1>
-            <ActivityCard key={activity._id} activity={activity}/>
-            <BookingForm />
+            {activity ?
+                <>
+                    <ActivityCard key={activity._id} activity={activity}/>
+                    <BookingForm />
+                </>
+                :
+                    <h1>roast beef</h1>
+
+        } 
         </>
     )
 }
