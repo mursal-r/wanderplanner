@@ -1,0 +1,46 @@
+/* SignUpForm.css */
+
+.form-container {
+    width: 400px; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .form-container label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-container input {
+    width: calc(100% - 20px); /* Adjust the width as needed */
+    padding: 12px; /* Increase padding for larger input fields */
+    margin-bottom: 15px; /* Increase margin bottom for spacing */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .form-container button {
+    width: 100%;
+    padding: 15px;
+    background-color: orange;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; /* Adjust the font size as needed */
+
+  }
+
+  
+  .form-container button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .error-message {
+    color: red;
+    margin-top: 10px;
+  }
+  

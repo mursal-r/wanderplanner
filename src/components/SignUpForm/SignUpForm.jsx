@@ -1,6 +1,7 @@
 import {Component} from 'react';
 import {signUp}  from '../../utilities/users-service';
 import {Link, Navigate} from 'react-router-dom';
+import "./SignUpForm.css"
 
 
 
