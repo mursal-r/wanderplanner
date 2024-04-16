@@ -1,5 +1,6 @@
 import React from 'react';
 import { TouristAttractionCard } from '../TouristAttractionCard/TouristAttractionCard';
+import './PopularDestinations.css'
 
 export default function PopularDestinations() {
     return (

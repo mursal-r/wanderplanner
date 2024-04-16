@@ -1,0 +1,34 @@
+/* PopularDestinations.css */
+
+.popular-destinations {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .tourist-attraction-container {
+    margin-top: 2rem; 
+  }
+  
+  /* Style for each TouristAttractionCard */
+  .tourist-attraction-card {
+    width: calc(18% - 20px); 
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+  
+  .tourist-attraction-card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .tourist-attraction-card-name {
+    font-weight: bold;
+    margin-top: 0.5rem;
+  }
+  
+  .tourist-attraction-card-price {
+    margin-top: 0.5rem;
+    color: #007bff; 
+  }
+  
