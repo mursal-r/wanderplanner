@@ -8,6 +8,8 @@ import NavBar from '../../components/NavBar/NavBar'
 // eslint-disable-next-line
 import LogInForm from '../../components/LogInForm/LogInForm';
 import SearchResults from '../SearchResults/SearchResults';
+import BookingForm from '../../components/BookingForm/BookingForm';
+
 
 export default function App() {
   const [user, setUser ] = useState(null)
@@ -21,6 +23,7 @@ export default function App() {
         <Route path="/search-results" element={<SearchResults/>}/>
         <Route path='/activity/:id' element={<NewBookingPage/>}></Route>
         <Route path='/authpage' element={<AuthPage setUser={setUser}/>}></Route>
+        <Route path='/booking' element={<BookingForm/>}/> {/* Added Route for BookingForm */}
       </Routes>
     </main>
   );
