@@ -29,12 +29,12 @@ export default function NewBookingPage() {
     
     return (
         <>
-            <h1> New Booking Page </h1>
             {bookingData ? (
-                <BookingConfirmed />
+                <BookingConfirmed key={activity._id} activity={activity}/>
             ) : (
                 activity ? (
-                <>
+                    <>
+                    <h1>Book Activity</h1>
                     <ActivityCard key={activity._id} activity={activity} />
                     <BookingForm setBookingData={setBookingData} />
                 </>

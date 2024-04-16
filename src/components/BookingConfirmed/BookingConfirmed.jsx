@@ -1,11 +1,12 @@
 import ActivityCard from "../ActivityCard/ActivityCard"
 
-export default function BookingConfirmed() {
+export default function BookingConfirmed({activity}) {
 
     return(
 
         <>
-        <ActivityCard />
+        <h1>Booking confirmed</h1>
+        <ActivityCard key={activity._id} activity={activity}/>
         </>
     );
 }
