@@ -6,36 +6,41 @@ import ActivityCard from "../../components/ActivityCard/ActivityCard";
 import BookingForm from "../../components/BookingForm/BookingForm";
 
 export default function NewBookingPage() {
-  const { id } = useParams();
-  const [activity, setActivity] = useState();
+    const {id} = useParams();
+    const [activity, setActivity] = useState(null);
+    const [bookingData, setBookingData] = useState(null)
+    useEffect(() => {
+        const fetchData = async () => {
+          try {
+            const data = await getActivityData(id);
+            setActivity(data);
+            //console.log('activiri: ', activity);
+          } catch (error) {
+            console.error('Error fetching activity data:', error);
+          }
+        };
+    
+        if (id) {
+          fetchData();
+        }
+      }, [id]);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const data = await getActivityData(id);
-        setActivity(data);
-        //console.log('activiri: ', activity);
-      } catch (error) {
-        console.error("Error fetching activity data:", error);
-      }
-    };
-
-    if (id) {
-      fetchData();
-    }
-  }, [id]);
-
-  return (
-    <div className="new-booking-page">
-      <h1>New Booking Page</h1>
-      {activity ? (
-        <div className="activity-card-container">
-          <ActivityCard key={activity._id} activity={activity} />
-        </div>
-      ) : (
-        <h1>roast beef</h1>
-      )}
-      <BookingForm />
-    </div>
-  );
+    
+    return (
+        <>
+            <h1> New Booking Page </h1>
+            {bookingData ? (
+                <BookingConfirmed />
+            ) : (
+                activity ? (
+                <>
+                    <ActivityCard key={activity._id} activity={activity} />
+                    <BookingForm setBookingData={setBookingData} />
+                </>
+                 ) : (
+                    <h1>roast beef</h1>
+                 )
+                )}
+        </>
+    )
 }
