@@ -5,6 +5,7 @@ import { getActivityData } from "../../utilities/activity-service";
 import ActivityCard from "../../components/ActivityCard/ActivityCard";
 import BookingForm from "../../components/BookingForm/BookingForm";
 
+
 export default function NewBookingPage() {
     const {id} = useParams();
     const [activity, setActivity] = useState(null);
