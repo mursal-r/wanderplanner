@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 160vh;
 }
 
 .header {
@@ -22,6 +22,8 @@
     text-align: center; /* will center the text */
     font-size: 50px;
     margin-left: 50px;
+    color: #333;
+    font-style: italic;
     
 }
 

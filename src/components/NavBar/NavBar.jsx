@@ -16,7 +16,7 @@ export default function NavBar({ user, setUser }) {
     return (
         <nav>
             <div className="navbar-left">
-                <span className="app-name">WANDER-PLANNER</span>
+                <span className="app-name">Wander-Planner</span>
             </div>
 
             <div className="navbar-right">
