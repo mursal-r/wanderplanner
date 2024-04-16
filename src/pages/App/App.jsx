@@ -19,6 +19,7 @@ export default function App() {
         <Route path="/" element={<HomePage/>}/>
         <Route path="/home" element={<HomePage/>}/>
         <Route path="/search-results" element={<SearchResults/>}/>
+        <Route path='/activity/:id' element={<NewBookingPage/>}></Route>
         <Route path='/authpage' element={<AuthPage setUser={setUser}/>}></Route>
       </Routes>
     </main>

@@ -26,7 +26,6 @@ export default function SearchResults() {
   }, [query]);
 
   console.log('activities:', activities); // This will log the fetched activities
-
   return (
     <div>
       <SearchBar/>

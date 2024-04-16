@@ -1,4 +1,5 @@
 
+
 import * as searchBarAPI from './searchBar-api';
 
 export async function getActivityData(query) {

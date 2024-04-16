@@ -1,13 +1,18 @@
+import { Link } from 'react-router-dom';
 import './ActivityCard.css'
 
 export default function ActivityCard({ activity }) {
-    const { name, description, imageURL, price, destination } = activity;
+    const { _id, name, description, imageURL, price, destination } = activity;
   
     return (
       <div className="activity-card">
-        <img src={imageURL} alt={name} />
+        <Link to={`/activity/${_id}`}>
+        <img src={`images/${imageURL}`} alt={name} />
+        </Link>
         <div className="activity-details">
+          <Link to={`/activity/${_id}`}>
           <h3>{name}</h3>
+          </Link>
           <p>{description}</p>
           <p>Price: ${price}</p>
           <p>Destination: {destination}</p>
