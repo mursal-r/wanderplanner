@@ -2,7 +2,7 @@ import React from 'react';
 import {useState} from 'react';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { getActivityData } from '../../utilities/searchBar-api';
+import { getActivityData } from '../../utilities/activity-api';
 import PopularDestinations from '../../components/PopularDestinations/PopularDestinations';
 import SearchBar from '../../components/SearchBar/SearchBar';
 import './HomePage.css'; // Import CSS file for styling

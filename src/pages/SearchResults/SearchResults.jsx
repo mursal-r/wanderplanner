@@ -13,7 +13,8 @@ export default function SearchResults() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await getActivityData(query);
+        const destination = {destination: query}
+        const data = await getActivityData(destination);
         setActivities(data);
       } catch (error) {
         console.error('Error fetching activity data:', error);
@@ -25,7 +26,6 @@ export default function SearchResults() {
     }
   }, [query]);
 
-  console.log('activities:', activities); // This will log the fetched activities
   return (
     <div>
       <SearchBar/>

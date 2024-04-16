@@ -1,8 +1,8 @@
 
 
-import * as searchBarAPI from './searchBar-api';
+import * as activityAPI from './activity-api';
 
 export async function getActivityData(query) {
-    const activities = await searchBarAPI.getActivityData(query);
+    const activities = await activityAPI.getActivityData(query);
     return activities
 } 
