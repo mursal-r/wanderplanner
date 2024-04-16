@@ -21,9 +21,12 @@ export default function NavBar({ user, setUser }) {
 
             <div className="navbar-right">
                 <Link to="/home">Home</Link>
-                &nbsp;  &nbsp;
+                &nbsp;|
                 {user ?
-                    <>
+                    <> 
+                        &nbsp;
+                        <Link to='/bookings'>My Bookings</Link>
+                        &nbsp;
                         <Link className='log' to="" onClick={handleLogOut}>Log Out</Link>
                         &nbsp;&nbsp;
                         <span>Welcome, {user.name}</span>
