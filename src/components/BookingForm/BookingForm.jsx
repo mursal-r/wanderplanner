@@ -5,7 +5,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import "./BookingForm.css";
 import backgroundVideo from "../../assets/backgroundVideo.mp4"; // Adjust the import path
 
-const BookingForm = () => {
+const BookingForm = ({setBookingData}) => {
   const [booking, setBooking] = useState({
     firstName: "",
     lastName: "",
@@ -27,8 +27,16 @@ const BookingForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Add your form submission logic here
+    
+    const {firstName, lastName, dateOfBirth,
+        tickets} = booking;
+        
+    const formData = {firstName, lastName, dateOfBirth,
+            tickets};
+            
+    setBookingData(formData);
     console.log("Booking submitted:", booking);
-    navigate("/thank-you");
+    //navigate("/thank-you");
   };
 
   return (

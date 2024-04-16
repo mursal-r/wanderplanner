@@ -4,6 +4,7 @@ import { useState } from "react";
 import { getActivityData } from "../../utilities/activity-service";
 import ActivityCard from "../../components/ActivityCard/ActivityCard";
 import BookingForm from "../../components/BookingForm/BookingForm";
+import BookingConfirmed from "../../components/BookingConfirmed/BookingConfirmed";
 
 
 export default function NewBookingPage() {
