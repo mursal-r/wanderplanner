@@ -9,7 +9,7 @@ const BookingForm = ({ setBookingData }) => {
   const [booking, setBooking] = useState({
     firstName: "",
     lastName: "",
-    dateOfActivity: null, // Initialize with null
+    dateOfActivity: null,
     tickets: 1,
   });
 
@@ -24,9 +24,13 @@ const BookingForm = ({ setBookingData }) => {
     setBooking((prev) => ({ ...prev, dateOfActivity: date }));
   };
 
+  const calculatePrice = () => {
+    // Assuming each ticket costs $100
+    return booking.tickets * 10; // Adjust the price calculation as needed
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add your form submission logic here
 
     const { firstName, lastName, dateOfActivity, tickets } = booking;
 
@@ -64,8 +68,8 @@ const BookingForm = ({ setBookingData }) => {
           <DatePicker
             selected={booking.dateOfActivity}
             onChange={handleDateChange}
-            dateFormat="MM/dd/yyyy" // Set the date format to MM/dd/yyyy
-            placeholderText="Activity Booking Date" // Change placeholder text
+            dateFormat="MM/dd/yyyy"
+            placeholderText="Activity Booking Date"
             className="form-control"
             required
           />
@@ -80,11 +84,14 @@ const BookingForm = ({ setBookingData }) => {
             required
           />
         </div>
+        <div className="price-card">
+          <h5>Total Price</h5>
+          <p>${calculatePrice()}</p>
+        </div>
         <button type="submit" className="btn primary__btn w-100 mt-4">
           Book Now
         </button>
       </form>
-      {/* Video Display */}
       <video autoPlay loop muted playsInline className="background-video">
         <source src={backgroundVideo} type="video/mp4" />
         Your browser does not support the video tag.

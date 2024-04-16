@@ -63,3 +63,25 @@
   width: 10px; /* Adjust the width of the buttons */
   height: 20px; /* Adjust the height of the buttons */
 }
+
+
+
+.price-card {
+  background-color: white; /* Set background color to white */
+  padding: 0.5rem; /* Add padding */
+  border-radius: 0.5rem; /* Add border radius for rounded corners */
+  margin-top: 1rem; /* Add margin to separate it from other elements */
+  width: 200px;
+}
+
+.price-card h5 {
+  font-size: 1.2rem; /* Set font size for the title */
+  margin-bottom: 0.5rem; /* Add bottom margin to the title */
+}
+
+.price-card p {
+  font-size: 1.5rem; /* Set font size for the price */
+  font-weight: bold; /* Make the price bold */
+  color: #333; /* Set text color */
+}
+
