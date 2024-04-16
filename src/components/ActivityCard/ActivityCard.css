@@ -1,0 +1,34 @@
+.activity-card {
+  width: calc(18% - 20px);
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden; /* Ensure image doesn't overflow the card */
+}
+
+.activity-card img.custom-image {
+  width: 80%; /* Adjust image width to fill the card */
+  height: auto; /* Maintain aspect ratio */
+  margin-top: 50px;
+  border-radius: 10px;
+}
+
+.activity-details {
+  padding: 20px; /* Add padding for the details */
+}
+
+.activity-details h3 {
+  font-weight: bold;
+  margin-top: 0; /* Remove default margin */
+}
+
+.activity-details p {
+  margin-top: 0.5rem;
+}
+
+.price {
+  color: #007bff; /* Price color */
+}
