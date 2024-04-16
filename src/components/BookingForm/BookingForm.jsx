@@ -5,11 +5,11 @@ import "react-datepicker/dist/react-datepicker.css";
 import "./BookingForm.css";
 import backgroundVideo from "../../assets/backgroundVideo.mp4"; // Adjust the import path
 
-const BookingForm = ({setBookingData}) => {
+const BookingForm = ({ setBookingData }) => {
   const [booking, setBooking] = useState({
     firstName: "",
     lastName: "",
-    dateOfActivity: new Date(), // Initialize with current date
+    dateOfActivity: null, // Initialize with null
     tickets: 1,
   });
 
@@ -27,13 +27,11 @@ const BookingForm = ({setBookingData}) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Add your form submission logic here
-    
-    const {firstName, lastName, dateOfBirth,
-        tickets} = booking;
-        
-    const formData = {firstName, lastName, dateOfBirth,
-            tickets};
-            
+
+    const { firstName, lastName, dateOfActivity, tickets } = booking;
+
+    const formData = { firstName, lastName, dateOfActivity, tickets };
+
     setBookingData(formData);
     console.log("Booking submitted:", booking);
     //navigate("/thank-you");
@@ -41,7 +39,6 @@ const BookingForm = ({setBookingData}) => {
 
   return (
     <div className="booking-form">
-      <h5>Traveler Details</h5>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <input
@@ -68,7 +65,7 @@ const BookingForm = ({setBookingData}) => {
             selected={booking.dateOfActivity}
             onChange={handleDateChange}
             dateFormat="MM/dd/yyyy" // Set the date format to MM/dd/yyyy
-            placeholderText="mm/dd/yyyy"
+            placeholderText="Activity Booking Date" // Change placeholder text
             className="form-control"
             required
           />

@@ -56,3 +56,10 @@
     margin-bottom: 0;
   }
   
+  /* Custom CSS for the datepicker navigation buttons */
+.react-datepicker__navigation--previous,
+.react-datepicker__navigation--next {
+  font-size: 12px; /* Adjust the font size to make the arrows smaller */
+  width: 10px; /* Adjust the width of the buttons */
+  height: 20px; /* Adjust the height of the buttons */
+}
