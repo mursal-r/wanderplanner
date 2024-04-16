@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import {getActivityData} from '../../utilities/activity-service'
 import ActivityCard from "../../components/ActivityCard/ActivityCard";
+import BookingForm from "../../components/BookingForm/BookingForm";
 
 export default function NewBookingPage() {
     const {id} = useParams();
@@ -27,7 +28,8 @@ export default function NewBookingPage() {
     return (
         <>
             <h1> New Booking Page </h1>
-            {<ActivityCard key={activity._id} activity={activity}/>}
+            <ActivityCard key={activity._id} activity={activity}/>
+            <BookingForm />
         </>
     )
 }
