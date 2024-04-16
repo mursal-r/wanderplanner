@@ -7,8 +7,8 @@ import BookingForm from "../../components/BookingForm/BookingForm";
 
 export default function NewBookingPage() {
     const {id} = useParams();
-    const [activity, setActivity] = useState();
-
+    const [activity, setActivity] = useState(null);
+    const [bookingData, setBookingData] = useState(null)
     useEffect(() => {
         const fetchData = async () => {
           try {
@@ -24,19 +24,23 @@ export default function NewBookingPage() {
           fetchData();
         }
       }, [id]);
+
     
     return (
         <>
             <h1> New Booking Page </h1>
-            {activity ?
+            {bookingData ? (
+                <BookingConfirmed />
+            ) : (
+                activity ? (
                 <>
-                    <ActivityCard key={activity._id} activity={activity}/>
-                    <BookingForm />
+                    <ActivityCard key={activity._id} activity={activity} />
+                    <BookingForm setBookingData={setBookingData} />
                 </>
-                :
+                 ) : (
                     <h1>roast beef</h1>
-
-        } 
+                 )
+                )}
         </>
     )
 }
