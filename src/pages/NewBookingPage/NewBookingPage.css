@@ -1,18 +1,49 @@
-.new-booking-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; 
-    min-height: 100vh; 
-  }
-  
-  .booking-content {
-    max-width: 800px; 
-    width: 100%;
-    padding: 20px;
-  }
-  
-  .activity-card-container {
-    margin-bottom: 20px;
-  }
-  
+.page-container {
+  padding: 10rem;
+  text-align: center; /* Center all content horizontally */
+}
+
+.activity-card-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  padding-bottom: 2rem;
+  border-bottom: 1px solid black; /* Add a border with black color */
+}
+
+.custom-activity-card {
+  font-size: 10rem;
+  font-weight: 700;
+  width: 500px;
+  height: 800px;
+}
+
+.booking-form-container {
+  padding-top: 3rem;
+  width: 800px;
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+.booking-form-container h5 {
+  margin-bottom: 1rem;
+}
+
+.booking-form-container input {
+  width: 50%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  border-bottom: 1px solid rgb(229, 231, 235);
+}
+
+.booking-form-container .booking__bottom {
+  margin-top: 1rem;
+}
+
+.booking-form-container .total h5,
+.booking-form-container .total span {
+  color: var(--heading-color) !important;
+  font-weight: 700 !important;
+  font-size: 1.1rem !important;
+}

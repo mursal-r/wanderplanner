@@ -1,87 +1,93 @@
 /* BookingForm.css */
 
 .booking-form {
-    padding: 2rem;
-    border-radius: 0.5rem;
-    border: 1px solid rgb(229, 231, 235);
-    position: sticky;
-    top: 80px;
-    background-color: rgba(255, 166, 0, 0.811);
-    max-width: 100%;
-  }
-  
-  .booking-form h5 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-  }
-  
-  .booking-form input,
-  .booking-form .react-datepicker-wrapper {
-    width: 50%;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    color: #333;
-    font-size: 1rem;
-    border: none;
-    border-bottom: 1px solid rgb(229, 231, 235);
-    margin-bottom: 1rem;
-  }
-  
-  .booking-form input:focus,
-  .booking-form .react-datepicker-wrapper input {
-    outline: none;
-  }
-  
-  .booking-form button {
-    width: 100px;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    color: white;
-    font-size: 1rem;
-    border: none;
-    background-color: #32b701;
-    cursor: pointer;
-  }
-  
-  .booking-form button:hover {
-    background-color: var(--primary-color-hover);
-  }
-  
-  .booking-form .form-group {
-    margin-bottom: 1rem;
-  }
-  
-  .booking-form .form-group:last-child {
-    margin-bottom: 0;
-  }
-  
-  /* Custom CSS for the datepicker navigation buttons */
-.react-datepicker__navigation--previous,
-.react-datepicker__navigation--next {
-  font-size: 12px; /* Adjust the font size to make the arrows smaller */
-  width: 10px; /* Adjust the width of the buttons */
-  height: 20px; /* Adjust the height of the buttons */
+  padding: 2rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgb(229, 231, 235);
+  position: sticky;
+  top: 80px;
+  background-color: rgba(255, 166, 0, 0.811);
+  max-width: 100%;
 }
 
+.booking-form h5 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
 
+.booking-form input,
+.booking-form .react-datepicker-wrapper {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: #333;
+  font-size: 1rem;
+  border: none;
+  border-bottom: 1px solid rgb(229, 231, 235);
+  margin-bottom: 1rem;
+}
+
+.booking-form input:focus,
+.booking-form .react-datepicker-wrapper input {
+  outline: none;
+}
+
+.booking-form button {
+  width: 100px;
+  padding: 0.5rem;
+  margin-top: 10px;
+  border-radius: 0.5rem;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  background-color: #32b701;
+  cursor: pointer;
+}
+
+.booking-form button:hover {
+  background-color: var(--primary-color-hover);
+}
+
+.booking-form .form-group {
+  margin-bottom: 1rem;
+}
+
+.booking-form .form-group:last-child {
+  margin-bottom: 0;
+}
+
+/* Custom CSS for the datepicker navigation buttons */
+.react-datepicker__navigation--previous,
+.react-datepicker__navigation--next {
+  font-size: 12px;
+  width: 1px;
+  height: 4px;
+}
+
+/* Center the datepicker wrapper */
+.react-datepicker-wrapper {
+  margin: 0 auto;
+}
 
 .price-card {
-  background-color: white; /* Set background color to white */
-  padding: 0.5rem; /* Add padding */
-  border-radius: 0.5rem; /* Add border radius for rounded corners */
-  margin-top: 1rem; /* Add margin to separate it from other elements */
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
   width: 200px;
+  /* Center horizontally */
+  margin: 0 auto;
 }
 
 .price-card h5 {
-  font-size: 1.2rem; /* Set font size for the title */
-  margin-bottom: 0.5rem; /* Add bottom margin to the title */
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
 }
 
 .price-card p {
-  font-size: 1.5rem; /* Set font size for the price */
-  font-weight: bold; /* Make the price bold */
-  color: #333; /* Set text color */
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0 auto;
 }
-

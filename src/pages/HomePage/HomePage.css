@@ -29,11 +29,15 @@
 
 
 .header img {
-    max-width: 80%; /* make sure image does not exceed its container width */
+    max-width: 1000px; /* Set the maximum width */
+    position: relative;
+    height: auto; /* Let the height adjust proportionally based on the width */
     border-radius: 10px;
-    margin-top: -50px;
+    margin-top: 150px;
     margin-bottom: 50px;
 }
+
+
 
 .search-container {
     margin-top: 20px; /* Add space b/w the header and search container */
