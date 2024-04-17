@@ -1,22 +1,26 @@
 const Booking = require("../../models/Booking");
+const User = require("../../models/User");
 
 module.exports = {
-    create
+  create
 };
 
-
 async function create(req, res) {
-  console.log('create booking kene');
-    try {
-        const booking = await Booking.create(req.body);
-        
-        res.json(booking);
-        //console.log('response sent', booking);
-      
-    } catch (err) {
-      // Client will check for non-2xx status code 
-      // 400 = Bad Request
-      //res.status(400).json(err);
-      console.log(err);
-    }
+  try {
+    const booking = await Booking.create(req.body);
+    
+    // Retrieve the user by ID
+    const user = await User.findById(req.body.user);
+
+    // Add the ID of the newly created booking to the user's bookings array
+    user.bookings.push(booking._id);
+
+    // Save the updated user object
+    await user.save();
+
+    res.json(booking);
+  } catch (err) {
+    console.error(err);
+    res.status(400).json(err);
   }
+}
