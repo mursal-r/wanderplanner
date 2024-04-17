@@ -29,7 +29,7 @@ export default function MyBookings({user}) {
         {bookings ? (
           bookings.map(booking => (
             
-            <BookingCard booking={booking} />
+            <BookingCard booking={booking} activityId={booking.activity} />
           ))
         ) : (
           <p>Loading...</p>
