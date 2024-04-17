@@ -41,6 +41,8 @@ const BookingForm = ({ setBookingData }) => {
     //navigate("/thank-you");
   };
 
+  //function below is what creates booking in databse. Problem is that there is a field in user model called bookings that is an array. When he creates function for booking it doesn't update. iN MODELS, I HAVE A USER MODEL AND A BOOKING MODEL. THE FUNCTION CREATES BOOKING FORM BOOKING MODEL. BUT USER MODEL HAS A FIELD CALLED BOOKINGS.THE ID OF THE BOOKING MODEL THAT WAS JUST CREATED NEEDS TO BE PUT IN HERE. 
+  //IF I GO TO CONTROLLERS - 
   return (
     <div className="booking-form">
       <form onSubmit={handleSubmit}>

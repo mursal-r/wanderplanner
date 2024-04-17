@@ -6,6 +6,8 @@ import PopularDestinations from '../../components/PopularDestinations/PopularDes
 import SearchBar from '../../components/SearchBar/SearchBar';
 import './HomePage.css'; // Import CSS file for styling
 import backgroundVideo from '../../assets/backgroundVideo.mp4';
+import Footer from '../../components/Footer/Footer'; // Adjust the import path
+
 
 export default function HomePage() {
   const location = useLocation();

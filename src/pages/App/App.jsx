@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Footer from '../../components/Footer/Footer'; // Adjust the import path
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import AuthPage from '../AuthPage/AuthPage';
@@ -9,6 +10,7 @@ import NavBar from '../../components/NavBar/NavBar'
 import LogInForm from '../../components/LogInForm/LogInForm';
 import SearchResults from '../SearchResults/SearchResults';
 import BookingForm from '../../components/BookingForm/BookingForm';
+
 
 
 export default function App() {
