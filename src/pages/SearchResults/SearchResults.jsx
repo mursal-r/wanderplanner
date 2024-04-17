@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { getActivityData } from '../../utilities/searchBar-service';
 import ActivityCard from '../../components/ActivityCard/ActivityCard';
-import './SearchResults.css'
+import './SearchResults.css';
 import SearchBar from '../../components/SearchBar/SearchBar';
+import NavBar from '../../components/NavBar/NavBar';
 
 export default function SearchResults() {
   const location = useLocation();
@@ -13,7 +14,7 @@ export default function SearchResults() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const destination = {destination: query}
+        const destination = { destination: query };
         const data = await getActivityData(destination);
         setActivities(data);
       } catch (error) {
@@ -28,8 +29,9 @@ export default function SearchResults() {
 
   return (
     <div>
-      <SearchBar/>
-      <h2>Search Results for "{query}"</h2>
+      <NavBar />
+      <SearchBar className="search-bar" />
+      <h2 className="search-results-heading">Search Results for "{query}"</h2>
       <div className="activity-list">
         {activities ? (
           activities.map(activity => (

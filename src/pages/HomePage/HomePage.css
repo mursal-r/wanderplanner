@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 80vh; /* Adjust the height of the container */
+    height: 90vh; /* Adjust the height of the container */
     position: relative;
   }
   
@@ -28,23 +28,24 @@
   }
   
   .header img {
-    max-width: 600px;
+    width: 500px;
     position: relative;
     height: auto;
     border-radius: 10px;
-    margin-top: 700px;
-    margin-bottom: 50px;
+    margin-top: 870px;
+    margin-bottom: 20px;
   }
   
   .search-container {
-    margin-top: 20px;
+    margin-top: 50px;
     margin-bottom: 50px;
   }
   
   .background-video {
     width: 100%;
     height: auto;
-    max-height: 50vh;
+    max-height: 80vh;
     object-fit: cover;
   }
   
+
