@@ -2,7 +2,8 @@ const Booking = require("../../models/Booking");
 
 module.exports = {
     create,
-    getAll
+    getAll,
+    remove
 };
 
 // Function to create a new booking
@@ -15,6 +16,25 @@ async function create(req, res) {
         console.error(err);
         res.status(400).json(err);
     }
+}
+
+async function remove(req, res) {
+
+    const {_id} = req.body;
+    console.log('req.body: ', req.body);
+    console.log('id: ', _id);
+    try {
+        const deletedBooking = await Booking.findByIdAndDelete(_id);
+        if (!deletedBooking) {
+          throw new Error('Activity not found'); // Handle case where activity with given ID doesn't exist
+        }
+        console.log('Deleted activity:', deletedBooking);
+        return deletedBooking; // Return the deleted activity if needed
+      } catch (error) {
+        console.error('Error deleting activity:', error);
+        throw error; // Propagate the error for handling in calling code
+      }
+
 }
 
 // Function to fetch all bookings

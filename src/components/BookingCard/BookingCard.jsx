@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { getActivityData } from "../../utilities/activity-service";
+import {deleteBooking} from "../../utilities/booking-service";
+import { useNavigate } from "react-router-dom";
 
 export default function BookingCard({ booking, activityId }) {
-  const [activity, setActivity] = useState(null);
-  const { date, tickets, price } = booking;
+    const navigate = useNavigate();
+    const [activity, setActivity] = useState(null);
+    const { date, tickets, price, _id } = booking;
 
-  useEffect(() => {
+    useEffect(() => {
     const fetchData = async () => {
         console.log('fetchData');
       try {
@@ -23,6 +26,8 @@ export default function BookingCard({ booking, activityId }) {
   function handleDelete(evt) {
     evt.preventDefault();
     // Implement delete logic
+
+    //deleteBooking(_id);
   }
 
   // Render the booking card only when activity data is available

@@ -12,3 +12,7 @@ export async function getBookings(data) {
     const bookings = await bookingAPI.getBookings(data);
     return bookings;
 }
+export async function deleteBooking(id) {
+    const deletion = await bookingAPI.deleteBooking(id);
+    return deletion;
+}

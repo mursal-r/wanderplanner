@@ -22,6 +22,7 @@ export default function MyBookings({user}) {
     }
   }, [bookingIDs]);
 
+
   return (
     
     <>
