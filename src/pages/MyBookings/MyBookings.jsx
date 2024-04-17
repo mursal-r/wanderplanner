@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { getBookings } from '../../utilities/booking-service';
-import ActivityCard from '../../components/ActivityCard/ActivityCard';
+import BookingCard from '../../components/BookingCard/BookingCard';
 import './MyBookings.css'
 
 export default function MyBookings({user}) {
@@ -25,6 +25,15 @@ export default function MyBookings({user}) {
 
   return (
     <>
+    <div className="activity-list">
+        {bookings ? (
+          bookings.map(booking => (
+            <BookingCard booking={booking} />
+          ))
+        ) : (
+          <p>Loading...</p>
+        )}
+      </div>
     </>
   );
 }
