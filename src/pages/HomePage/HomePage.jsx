@@ -32,7 +32,6 @@ export default function HomePage() {
     <div className="container">
       <div className="header">
         <div className="header-content">
-          <h1>Explore fun activities for your next destination with ease.</h1>
           <video
             autoPlay
             loop
@@ -43,7 +42,7 @@ export default function HomePage() {
             <source src={backgroundVideo} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          <img src="/images/mainImage.png" alt="Fun activities" />
+          <img src="/images/mainImage.jpg" alt="Fun activities" />
         </div>
       </div>
       <SearchBar />
