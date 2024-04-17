@@ -6,7 +6,7 @@ const bookingCtrl = require('../../controllers/api/bookings');
 router.post('/', bookingCtrl.create);
 
 // GET route for fetching all bookings
-router.get('/', bookingCtrl.getAll);
+router.post('/get', bookingCtrl.getAll);
 
 module.exports = router;
 

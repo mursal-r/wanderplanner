@@ -8,6 +8,7 @@ module.exports = {
 // Function to create a new booking
 async function create(req, res) {
     try {
+        console.log(req.body);
         const booking = await Booking.create(req.body);
         res.json(booking);
     } catch (err) {
@@ -19,6 +20,8 @@ async function create(req, res) {
 // Function to fetch all bookings
 async function getAll(req, res) {
     try {
+        const data = req.body;
+        console.log('asdasd: ', data);
         const bookings = await Booking.find();
         res.json(bookings);
     } catch (err) {

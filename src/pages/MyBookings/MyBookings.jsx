@@ -9,7 +9,6 @@ export default function MyBookings({user}) {
 
   useEffect(() => {
     const fetchData = async () => {
-      console.log('fetchdata: ', user);
       try {
         const data = await getBookings(bookingIDs);
         setBookings(data);

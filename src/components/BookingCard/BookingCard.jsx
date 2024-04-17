@@ -5,8 +5,8 @@ export default function BookingCard({booking}) {
     const {date, tickets, price} = booking;
     const {name} = activity;
 
-    function handleDelete() {
-
+    function handleDelete(evt) {
+        evt.preventDefault();
     }
 
     return(
