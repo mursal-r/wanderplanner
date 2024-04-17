@@ -29,10 +29,18 @@ const BookingForm = ({ setBookingData, user, activity }) => {
     setBooking((prev) => ({ ...prev, date: date }));
   };
 
+  // const calculatePrice = () => {
+  //   // Assuming each ticket costs $100
+  //   return booking.tickets * 10; // Adjust the price calculation as needed
+  // };
+
   const calculatePrice = () => {
-    // Assuming each ticket costs $100
-    return booking.tickets * 10; // Adjust the price calculation as needed
+    if (activity) {
+      return booking.tickets * activity.price;
+    }
+    return 0;
   };
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -108,10 +116,10 @@ const BookingForm = ({ setBookingData, user, activity }) => {
           Book Now
         </button>
       </form>
-      <video autoPlay loop muted playsInline className="background-video">
+      {/* <video autoPlay loop muted playsInline className="background-video">
         <source src={backgroundVideo} type="video/mp4" />
         Your browser does not support the video tag.
-      </video>
+      </video> */}
     </div>
   );
 };

@@ -3,10 +3,10 @@
 .form-container {
     width: 400px; /* Adjust the width as needed */
     margin: 0 auto; /* Center the container */
-    padding: 50px;
-    border: 1px solid #000000;
+    padding: 100px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: grey;
+    background-color: #a0a0a06c; 
   }
   
   .form-container label {
@@ -25,7 +25,7 @@
   .form-container button {
     width: 100%;
     padding: 15px;
-    background-color: rgb(3, 172, 3);
+    background-color: #333;
     color: #fff;
     border: none;
     border-radius: 5px;

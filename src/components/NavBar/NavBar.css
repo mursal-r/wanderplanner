@@ -14,11 +14,11 @@ nav {
   .navbar-left {
     font-size: 1.2rem;
   }
-  
+
   .navbar-right a {
     color: #fff;
     text-decoration: none;
-    margin-right: 10px;
+    margin-right: 20px;
   }
   
   .navbar-right a.log {

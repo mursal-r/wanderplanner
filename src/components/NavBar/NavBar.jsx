@@ -21,7 +21,7 @@ export default function NavBar({ user, setUser }) {
 
             <div className="navbar-right">
                 <Link to="/home">Home</Link>
-                &nbsp;|
+                &nbsp;
                 {user ?
                     <> 
                         &nbsp;
