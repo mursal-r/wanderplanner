@@ -24,6 +24,7 @@ app.use(require('./config/checkToken'));
 
 app.use('/api/users', require('./routes/api/users'));
 app.use('/api/search',require('./routes/api/search'));
+app.use('/api/booking', require('./routes/api/bookings'));
 
 // Configure to use port 3001 instead of 3000 during
 // development to avoid collision with React's dev server
