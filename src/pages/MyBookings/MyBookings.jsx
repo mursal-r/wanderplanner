@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { getBookings } from '../../utilities/booking-service';
 import ActivityCard from '../../components/ActivityCard/ActivityCard';
 import './MyBookings.css'
-import SearchBar from '../../components/SearchBar/SearchBar';
 
 export default function MyBookings({user}) {
   const [bookings, setBookings] = useState(null);
@@ -26,8 +25,6 @@ export default function MyBookings({user}) {
 
   return (
     <>
-      <SearchBar/>
-      <h2>Search Results for ""</h2>
     </>
   );
 }
