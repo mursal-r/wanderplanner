@@ -4,13 +4,18 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "./BookingForm.css";
 import backgroundVideo from "../../assets/backgroundVideo.mp4"; // Adjust the import path
+import { createBooking } from "../../utilities/booking-service";
 
-const BookingForm = ({ setBookingData }) => {
+
+const BookingForm = ({ setBookingData, user, activity }) => {
   const [booking, setBooking] = useState({
+    user: user._id,
+    activity: activity._id,
     firstName: "",
     lastName: "",
-    dateOfActivity: null,
+    date: null,
     tickets: 1,
+    price: 0
   });
 
   const navigate = useNavigate();
@@ -21,7 +26,7 @@ const BookingForm = ({ setBookingData }) => {
   };
 
   const handleDateChange = (date) => {
-    setBooking((prev) => ({ ...prev, dateOfActivity: date }));
+    setBooking((prev) => ({ ...prev, date: date }));
   };
 
   const calculatePrice = () => {
@@ -32,12 +37,13 @@ const BookingForm = ({ setBookingData }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const { firstName, lastName, dateOfActivity, tickets } = booking;
+    const { firstName, lastName, date, tickets, price, user, activity } = booking;
 
-    const formData = { firstName, lastName, dateOfActivity, tickets };
+    const formData = { firstName, lastName, date, tickets, price, user, activity };
 
+    createBooking(formData);
     setBookingData(formData);
-    console.log("Booking submitted:", booking);
+    //console.log("Booking submitted:", booking);
     //navigate("/thank-you");
   };
 
@@ -68,7 +74,8 @@ const BookingForm = ({ setBookingData }) => {
         </div>
         <div className="form-group">
           <DatePicker
-            selected={booking.dateOfActivity}
+            name="date"
+            selected={booking.date}
             onChange={handleDateChange}
             dateFormat="MM/dd/yyyy"
             placeholderText="Activity Booking Date"
@@ -89,6 +96,7 @@ const BookingForm = ({ setBookingData }) => {
         <div className="price-card">
           <h5>Total Price</h5>
           <p>${calculatePrice()}</p>
+          <input type="hidden" name="price" value={calculatePrice()} />
         </div>
         <button type="submit" className="btn primary__btn w-100 mt-4">
           Book Now

@@ -6,7 +6,7 @@ import BookingForm from "../../components/BookingForm/BookingForm";
 import BookingConfirmed from "../../components/BookingConfirmed/BookingConfirmed";
 import "./NewBookingPage.css";
 
-export default function NewBookingPage() {
+export default function NewBookingPage({user}) {
     const { id } = useParams();
     const [activity, setActivity] = useState(null);
     const [bookingData, setBookingData] = useState(null);
@@ -41,7 +41,7 @@ export default function NewBookingPage() {
                             />
                         </div>
                         <div className="booking-form-container">
-                            <BookingForm setBookingData={setBookingData} />
+                            <BookingForm setBookingData={setBookingData} user={user} activity={activity}/>
                         </div>
                     </>
                 ) : null
