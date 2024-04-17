@@ -2,6 +2,7 @@ import {useState} from 'react';
 import SignUpForm from '../../components/SignUpForm/SignUpForm';
 import LogInForm from "../../components/LogInForm/LogInForm";
 import { useNavigate } from 'react-router-dom';
+import './AuthPage.css';
 
 export default function AuthPage({setUser}) {
 

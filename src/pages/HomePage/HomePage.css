@@ -1,9 +1,13 @@
+body {
+  margin-top: 80px
+}
+
 .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 90vh; /* Adjust the height of the container */
+    height: 250vh; /* Adjust the height of the container */
     position: relative;
   }
   
@@ -17,22 +21,17 @@
     align-items: center; /* Center horizontally */
   }
   
-  .header h1 {
-    max-width: 300px;
-    word-wrap: break-word;
-    text-align: center;
-    font-size: 50px;
-    margin-top: 50px; /* Adjust top margin as needed */
-    color: #333;
-    font-style: italic;
-  }
+ h2 {
+  font-size: 30px;
+  margin-top: 100px;
+ }
   
   .header img {
     width: 500px;
     position: relative;
     height: auto;
     border-radius: 10px;
-    margin-top: 870px;
+    margin-top: 700px;
     margin-bottom: 20px;
   }
   
@@ -44,7 +43,8 @@
   .background-video {
     width: 100%;
     height: auto;
-    max-height: 80vh;
+    margin-top: 150px;
+    max-height: 50vh;
     object-fit: cover;
   }
   

@@ -24,10 +24,12 @@ export default function MyBookings({user}) {
   }, [bookingIDs]);
 
   return (
+    
     <>
     <div className="activity-list">
         {bookings ? (
           bookings.map(booking => (
+            
             <BookingCard booking={booking} />
           ))
         ) : (

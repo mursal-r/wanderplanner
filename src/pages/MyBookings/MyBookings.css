@@ -1,0 +1,24 @@
+main {
+    margin-top: -80px;
+}
+
+.my-bookings-container {
+    margin: 500px auto; /* Add margin to the top and bottom, and auto for centering horizontally */
+    padding-top: 400px; /* Add padding to the top */
+  }
+  
+  
+  .booking-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .booking-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-top: 400px;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  

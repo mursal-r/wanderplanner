@@ -44,7 +44,8 @@ export default function HomePage() {
             <source src={backgroundVideo} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          <img src="/images/mainImage.jpg" alt="Fun activities" />
+          {/* <img src="/images/mainImage.jpg" alt="Fun activities" /> */}
+          <h2> Explore fun activities for your next destination with ease. </h2>
         </div>
       </div>
       <SearchBar />
