@@ -23,7 +23,7 @@ export default function App() {
         <Route path="/search-results" element={<SearchResults/>}/>
         <Route path='/activity/:id' element={<NewBookingPage/>}></Route>
         <Route path='/authpage' element={<AuthPage setUser={setUser}/>}></Route>
-        <Route path='/booking' element={<BookingForm/>}/> {/* Added Route for BookingForm */}
+        <Route path='/booking' element={<BookingForm user={user}/>}/>
       </Routes>
     </main>
   );
