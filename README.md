@@ -27,3 +27,6 @@ Authentication: JSON Web Tokens (JWT)
 
 <img width="911" alt="Screenshot 2024-04-17 at 7 02 53 AM" src="https://github.com/mursal-r/wanderplanner/assets/157185506/3d1e7b8f-5d36-4479-9903-52c8982cc096">
 
+
+## heroku deployment
+https://wanderplanner-125186f452a4.herokuapp.com/home
